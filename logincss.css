@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #2f4256;
+    --navy-dark: #243547;
+    --bg: #ededed;
+    --green: #34a06f;
+    --green-dark: #25845c;
+    --text: #27394b;
+    --white: #ffffff;
+    --shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: "Inter", "Hind Siliguri", sans-serif;
+    background: #dcdcdc;
+    color: var(--text);
+}
+
+.page {
+    min-height: 100vh;
+    background: var(--bg);
+    padding: 0;
+}
+
+.topbar {
+    background: var(--navy);
+    min-height: 86px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.brand-box {
+    width: 265px;
+    height: 86px;
+    background: #f5f4ef;
+    border-radius: 0 0 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #37404a;
+}
+
+.back-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.login-section {
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 20px;
+}
+
+.login-title {
+    font-size: 2rem;
+    color: var(--green);
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #314457;
+}
+
+.form-group input {
+    width: 100%;
+    height: 56px;
+    border: 2px solid var(--green);
+    border-radius: 14px;
+    background: transparent;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text);
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: #7e8892;
+}
+
+.login-btn {
+    width: 186px;
+    height: 48px;
+    margin: 6px auto 0;
+    border: none;
+    border-radius: 14px;
+    background: var(--green);
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: 0.2s ease;
+}
+
+.login-btn:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.forgot-link {
+    margin-top: 28px;
+    text-decoration: none;
+    color: #314457;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.bottom-bar {
+    background: var(--navy);
+    min-height: 92px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px 0 10px;
+    gap: 16px;
+}
+
+.language-box {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow {
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.account-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.account-box p {
+    color: #244f6b;
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.create-btn {
+    min-width: 182px;
+    height: 42px;
+    padding: 0 20px;
+    border: 3px solid #47b07f;
+    border-radius: 14px;
+    background: #f8f8f8;
+    color: #2fa06f;
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.create-btn:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding-top: 10px;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 12px 14px;
+    }
+
+    .brand-box {
+        width: 100%;
+        justify-content: center;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .brand-text {
+        font-size: 1.5rem;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 16px 12px;
+    }
+
+    .account-box {
+        align-items: flex-start;
+    }
+
+    .create-btn {
+        min-width: 160px;
+    }
+}

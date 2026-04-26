@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeChecker - Admin Dashboard</title>
+  <link rel="stylesheet" href="admindasgboradcss.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+
+    
+    <header class="topbar">
+      <div class="brand-box">
+        <img src="logo.png"  height="150" width="150" class="logo-img" alt="FakeChecker Logo">
+        
+      </div>
+
+      <h1 class="page-title">ADMIN DASHBORAD</h1>
+
+      <a href="index.html" class="back-link">BACK TO HOME</a>
+    </header>
+
+    
+    <div class="dashboard-layout">
+
+      
+      <aside class="left-panel card">
+        <h2 class="sidebar-title">Sidebar Menu</h2>
+
+        <nav class="dashboard-menu">
+          <a href="#" class="dash-item active">
+            <span class="dash-icon"><img src="dashboard.png" height="20" width="20" alt=""></span>
+            <span>AdminDashboard</span>
+          </a>
+
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="manageuser.webp" height="20" width="20" alt=""></span>
+            <span>ManageUsers</span>
+          </a>
+
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="history.png" height="20" width="20" alt=""></span>
+            <span>VerificationHistory</span>
+          </a>
+
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="reportcontent.png" height="20" width="20" alt=""></span>
+            <span>ReportsContent</span>
+          </a>
+
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="trustedsource.png" height="20" width="20" alt=""></span>
+            <span>TrustedSources</span>
+          </a>
+
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="setting.png" height="20" width="20" alt=""></span>
+            <span>Settings</span>
+          </a>
+        </nav>
+      </aside>
+
+     
+      <section class="stats-panel card">
+        <div class="stats-grid">
+
+          <div class="stat-box">
+            <div class="stat-head">
+              <img src="totalverification.png" height="35" width="35" alt="">
+              <div>মোট ইউজারস/<br>Total Users</div>
+            </div>
+            <div class="mini-bar-shell">
+              <div class="mini-bar blue-bar">3,450</div>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-head">
+              <img src="reportcontent.jpg" height="35" width="35" alt="">
+              <div>মোট রিপোর্ট/<br>Report</div>
+            </div>
+            <div class="mini-bar-shell">
+              <div class="mini-bar navy-bar short-bar">150</div>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-head">
+              <img src="totalverification.png" height="35" width="35" alt="">
+              <div>মোট চেক/<br>Total Verifications</div>
+            </div>
+            <div class="mini-bar-shell">
+              <div class="mini-bar green-bar medium-bar">420</div>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-head">
+              <img src="fakefound.png" height="35" width="35" alt="">
+              <div class="red-text">Total Fake Detected/<br>মোট ভুয়া সংবাদ ধরা পড়েছে</div>
+            </div>
+            <div class="mini-bar-shell">
+              <div class="mini-bar red-bar tall-bar">1,250</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      
+      <aside class="profile-panel card">
+        <div class="profile-inner">
+          <img src="user.avif" class="profile-avatar" alt="Admin Profile">
+          <div class="profile-info">
+            <p><strong>Name:</strong> Admin 001</p>
+            <p><strong>Gmail:</strong> userName23@gmail.com</p>
+          </div>
+        </div>
+      </aside>
+
+      
+      <section class="history-panel card">
+        <div class="table-wrap">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>USER</th>
+                <th>CONTENT</th>
+                <th>RESULT</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1 Rahim9</td>
+                <td>NEWS</td>
+                <td><span class="result-badge fake">FAKE</span></td>
+              </tr>
+
+              <tr>
+                <td>2 Joy20</td>
+                <td>IMAGE</td>
+                <td><span class="result-badge real">REAL</span></td>
+              </tr>
+
+              <tr>
+                <td>3. Fabiha100</td>
+                <td>VIDEO</td>
+                <td><span class="result-badge sus">SUS.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      
+      <footer class="dashboard-footer">
+        <div class="language-box">
+          <span>SELECT LANGUAGE</span>
+          <span class="arrow">⌄</span>
+        </div>
+
+        <button class="logout-btn" id="logoutBtn">LogOut</button>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="admindashboradjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeChecker - Source Verify</title>
+  <link rel="stylesheet" href="sourcefindcss.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+
+    
+    <header class="topbar">
+      <div class="brand-box">
+        <img src="logo.png" height="120" width="120" class="logo-img" alt="FakeChecker Logo">
+        <div class="brand-text">FAKECHECKER</div>
+      </div>
+
+      <h1 class="page-title">উৎস যাচাই/Source Verify</h1>
+
+      <a href="index.html" class="back-link">BACK TO HOME</a>
+    </header>
+
+   
+    <div class="main-layout">
+
+      
+      <aside class="sidebar">
+        <nav class="menu">
+          <a href="textverify.html" class="menu-item">
+            <span class="menu-icon"><img src="textVerify.png" height="20" width="20" alt=""></span>
+            <span>টেক্সট যাচাই/Text News Verify</span>
+          </a>
+
+          <a href="imageverify.html" class="menu-item">
+            <span class="menu-icon"><img src="imageVerify.png" height="20" width="20" alt=""></span>
+            <span>ছবি যাচাই/Image Verify</span>
+          </a>
+
+          <a href="videoverify.html" class="menu-item">
+            <span class="menu-icon"><img src="videoVerify.png" height="20" width="20" alt=""></span>
+            <span>ভিডিও যাচাই/Video Verify</span>
+          </a>
+
+          <a href="sourcefind.html" class="menu-item active">
+            <span class="menu-icon"><img src="findsource2.png" height="20" width="20" alt=""></span>
+            <span>উৎস যাচাই/Source Verify</span>
+          </a>
+
+          <a href="login.html" class="menu-item">
+            <span class="menu-icon"><img src="login.webp" height="20" width="20" alt=""></span>
+            <span>LOGIN</span>
+          </a>
+
+          <a href="createaccount.html" class="menu-item">
+            <span class="menu-icon"><img src="createacc.webp" height="20" width="20" alt=""></span>
+            <span>CREATE A NEW ACCOUNT</span>
+          </a>
+        </nav>
+      </aside>
+
+      
+      <main class="content">
+
+        
+        <section class="verify-panel card">
+          <div class="verify-top-icon">
+            <img src="source.png" height="100" width="100" alt="Source Verify">
+          </div>
+
+          <div class="search-box">
+            <input
+              id="sourceInput"
+              type="text"
+              placeholder="নিউজ / PASTE NEWS LINK"
+            />
+            <button class="search-icon" id="searchBtn" aria-label="Search">
+              <img src="search.png" height="20" width="20" alt="Search">
+            </button>
+          </div>
+
+          <button id="verifyBtn" class="verify-btn">VERIFY<br>যাচাই</button>
+        </section>
+
+        
+        <section class="result-section">
+          <div class="result-label">RESULT</div>
+
+          <div class="result-grid">
+
+            
+            <div class="result-card source-score-card">
+              <h2 class="source-title">
+                <img src="findsource2.png" height="20" width="20" alt="">
+                FIND NEWS SOURCE/উৎস খুঁজুন:
+              </h2>
+
+              <div class="bars-header">
+                <span class="trusted-text">TRESTED/বিশ্বস্ত</span>
+                <span class="suspicious-text">SUSPICIOUS/সন্দেহজনক</span>
+                <span class="unknown-text">UNKNOWN/অজানা</span>
+              </div>
+
+              <div class="bars-area">
+                <div class="bar-column">
+                  <div class="bar-shell">
+                    <div class="bar-fill trusted-bar" id="trustedBar">40%</div>
+                  </div>
+                </div>
+
+                <div class="bar-column">
+                  <div class="bar-shell">
+                    <div class="bar-fill suspicious-bar" id="suspiciousBar">60%</div>
+                  </div>
+                </div>
+
+                <div class="bar-column">
+                  <div class="bar-shell">
+                    <div class="bar-fill unknown-bar" id="unknownBar">80%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="action-buttons">
+                <button class="pill-btn">SHARE শেয়ার</button>
+                <button id="newVerificationBtn" class="pill-btn secondary">New Verification</button>
+              </div>
+            </div>
+
+            
+            <div class="result-card explanation-card">
+              <div class="source-list-box">
+                <h3>✅ নির্ভরযোগ্য সোর্স:</h3>
+                <ul id="sourceList">
+                  <li>prothomalo.com (এই খবর নেই)</li>
+                  <li>bdnews24.com (এই খবর নেই)</li>
+                  <li>factcheck.gov.bd (নকল বলেছে)</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="sourcefindjs.js"></script>
+</body>
+</html>

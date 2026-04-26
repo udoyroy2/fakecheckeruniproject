@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeChecker - Image Verify</title>
+  <link rel="stylesheet" href="imagecss.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+
+    
+    <header class="topbar">
+      <div class="brand-box">
+        <img src="logo.png" height="150" width="150" alt="FakeChecker Logo">
+      </div>
+
+      <h1 class="page-title">ছবি যাচাই/Image Verify</h1>
+
+      <a href="index.html" class="back-link">BACK TO HOME</a>
+    </header>
+
+    
+    <div class="main-layout">
+
+      
+      <aside class="sidebar">
+        <nav class="menu">
+          <a href="textverify.html"  class="menu-item">
+            <span class="menu-icon"><img src="textVerify.png" height="20" width="20" alt=""></span>
+            <span>টেক্সট যাচাই/Text News Verify</span>
+          </a>
+
+          <a href="imageverify.html" class="menu-item active">
+            <span class="menu-icon"><img src="imageVerify.png" height="20" width="20" alt=""></span>
+            <span>ছবি যাচাই/Image Verify</span>
+          </a>
+
+          <a href="videoverify.html" class="menu-item">
+            <span class="menu-icon"><img src="videoVerify.png" height="20" width="20" alt=""></span>
+            <span>ভিডিও যাচাই/Video Verify</span>
+          </a>
+
+          <a href="sourcefind.html" class="menu-item">
+            <span class="menu-icon"><img src="findsource2.png" height="20" width="20" alt=""></span>
+            <span>উৎস যাচাই/Source Verify</span>
+          </a>
+
+          <a href="login.html" class="menu-item">
+            <span class="menu-icon"><img src="login.webp" height="20" width="20" alt=""></span>
+            <span>LOGIN</span>
+          </a>
+
+          <a href="createaccount.html" class="menu-item">
+            <span class="menu-icon"><img src="createacc.webp" height="20" width="20" alt=""></span>
+            <span>CREATE A NEW ACCOUNT</span>
+          </a>
+        </nav>
+      </aside>
+
+      
+      <main class="content">
+
+        
+        <section class="verify-panel card">
+          <div class="verify-top-icon">
+            <img src="imageVerify.png" height="100" width="100" alt="Image Verify">
+          </div>
+
+          <div class="upload-box">
+            <label for="imageInput" class="upload-add-btn">+</label>
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <div class="upload-placeholder" id="fileName">ছবি / image</div>
+          </div>
+
+          <div class="verify-actions">
+            <button class="upload-btn" id="uploadBtn">UPLOAD IMAGE</button>
+            <button class="verify-btn" id="verifyBtn">VERIFY<br>যাচাই</button>
+          </div>
+        </section>
+
+        
+        <section class="result-section">
+          <div class="result-label">RESULT</div>
+
+          <div class="result-grid">
+
+            <div class="result-card gauge-card">
+              <div class="gauge-wrap">
+                <div class="gauge" id="gauge" style="--percent:85;">
+                  <div class="gauge-inner">
+                    <span id="scoreText">85%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="confidence-title">
+                FAKE CONTENT CONFIDENCE<br>
+                PERCENTAGE %
+              </div>
+
+              <div class="confidence-subtitle">
+                /নকল কন্টেন্ট হওয়ার সম্ভাবনা:
+              </div>
+
+              <div class="action-buttons">
+                <button class="pill-btn">SHARE শেয়ার</button>
+                <button id="newVerificationBtn" class="pill-btn secondary">New Verification</button>
+              </div>
+            </div>
+
+            <div class="result-card explanation-card">
+              <h2>🔎 কেন নকল / Explanation ?</h2>
+              <ul id="resultsList">
+                <li>এই ছবিটি কোনো বিশ্বস্ত সংবাদ মাধ্যমে প্রকাশিত হয়নি</li>
+                <li>ছবিটির উৎস নির্ভরযোগ্যভাবে শনাক্ত করা যায়নি</li>
+                <li>একই ধরনের ছবি আগে বিভ্রান্তিকর পোস্টে ব্যবহার হয়েছিল</li>
+                <li>সরকারি বা বিশ্বস্ত ওয়েবসাইটে এর সমর্থন পাওয়া যায়নি</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="imagejs.js"></script>
+</body>
+</html>
