@@ -76,7 +76,7 @@ verifyBtn.addEventListener("click", async () => {
     const formData = new FormData();
     formData.append("video", file);
 
-    const response = await fetch("/fakecheckeruniproject/allfile/videoverifyapi.php", {
+    fetch("videoverifyapi.php", {
       method: "POST",
       body: formData
     });

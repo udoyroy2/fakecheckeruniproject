@@ -38,7 +38,7 @@ async function runVerification() {
     formData.append("source", input);
 
 
-    const response = await fetch("/fakecheckeruniproject/allfile/sourceveifyapi.php", {
+    const response = await fetch("sourceverifyapi.php", {
       method: "POST",
       body: formData
     });

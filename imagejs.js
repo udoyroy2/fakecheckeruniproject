@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const formData = new FormData();
       formData.append("image", currentImageBlob);
 
-      const response = await fetch("/fakecheckeruniproject/allfile/imageverifyapi.php", {
+      fetch("imageverifyapi.php",  {
         method: "POST",
         body: formData
       });
