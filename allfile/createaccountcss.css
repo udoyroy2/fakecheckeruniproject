@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #2f4256;
+    --navy-dark: #243547;
+    --bg: #ededed;
+    --green: #34a06f;
+    --green-dark: #25845c;
+    --text: #27394b;
+    --white: #ffffff;
+    --shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: "Inter", "Hind Siliguri", sans-serif;
+    background: #dcdcdc;
+    color: var(--text);
+}
+
+.page {
+    min-height: 100vh;
+    background: var(--bg);
+    padding: 0;
+}
+
+.topbar {
+    background: var(--navy);
+    min-height: 86px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.brand-box {
+    width: 270px;
+    height: 86px;
+    background: #f5f4ef;
+    border-radius: 0 0 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 18px;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #37404a;
+}
+
+.back-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.create-section {
+    min-height: 610px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px 16px;
+}
+
+.create-title {
+    font-size: 1.9rem;
+    color: var(--green);
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.create-form {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #314457;
+}
+
+.form-group input {
+    width: 100%;
+    height: 46px;
+    border: 1.8px solid var(--green);
+    border-radius: 14px;
+    background: transparent;
+    padding: 0 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text);
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: #7e8892;
+}
+
+.create-btn-main {
+    width: 260px;
+    height: 46px;
+    margin: 14px auto 0;
+    border: none;
+    border-radius: 14px;
+    background: var(--green);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: 0.2s ease;
+}
+
+.create-btn-main:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.login-link-wrap {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.login-link-wrap p {
+    color: #24506c;
+    font-size: 0.96rem;
+    font-weight: 800;
+}
+
+.bottom-bar {
+    background: var(--navy);
+    min-height: 92px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px 0 10px;
+    gap: 16px;
+}
+
+.language-box {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow {
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.login-btn-footer {
+    min-width: 172px;
+    height: 42px;
+    padding: 0 20px;
+    border: 3px solid #47b07f;
+    border-radius: 14px;
+    background: #f8f8f8;
+    color: #2fa06f;
+    font-size: 0.98rem;
+    font-weight: 800;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.login-btn-footer:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding-top: 10px;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 12px 14px;
+    }
+
+    .brand-box {
+        width: 100%;
+        justify-content: center;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .brand-text {
+        font-size: 1.5rem;
+    }
+
+    .create-title {
+        font-size: 1.4rem;
+    }
+
+    .bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 16px 12px;
+    }
+
+    .login-link-wrap {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .login-btn-footer {
+        min-width: 150px;
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeChecker - Text Verify</title>
+  <link rel="stylesheet" href="textverifycss.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+
+   
+    <header class="topbar">
+      <div class="brand-box">
+        <img src="logo.png" height="150" width="150" alt="FakeChecker Logo">
+        
+      </div>
+
+      <h1 class="page-title">টেক্সট যাচাই/Text News Verify</h1>
+
+      <a href="#" class="back-link">BACK TO HOME</a>
+    </header>
+
+    
+    <div class="main-layout">
+
+      
+      <aside class="sidebar">
+        <nav class="menu">
+          <a href="textverify.html" class="menu-item active">
+            <span class="menu-icon"><img src="textVerify.png" height="20" width="20" alt=""></span>
+            <span>Text Verify</span>
+          </a>
+
+          <a href="imageverify.html" class="menu-item">
+            <span class="menu-icon"><img src="imageVerify.png" height="20" width="20" alt=""></span>
+            <span>Image Verify</span>
+          </a>
+
+          <a href="videoverify.html" class="menu-item">
+            <span class="menu-icon"><img src="videoVerify.png" height="20" width="20" alt=""></span>
+            <span>Video Verify</span>
+          </a>
+
+          <a href="sourcefind.html" class="menu-item">
+            <span class="menu-icon"><img src="findsource2.png" height="20" width="20" alt=""></span>
+            <span>Source Find</span>
+          </a>
+
+          <a href="login.html" class="menu-item">
+            <span class="menu-icon"><img src="login.webp" height="20" width="20" alt=""></span>
+            <span>LOGIN</span>
+          </a>
+
+          <a href="createaccount.html" class="menu-item">
+            <span class="menu-icon"><img src="createacc.webp" height="20" width="20" alt=""></span>
+            <span>CREATE ACCOUNT</span>
+          </a>
+        </nav>
+      </aside>
+
+      
+      <main class="content">
+
+        
+        <section class="verify-panel card">
+          <div class="verify-top-icon">
+            <img src="textVerify.png" height="100" width="100" alt="Text Verify">
+          </div>
+
+          <div class="search-box">
+            <input
+              id="newsInput"
+              type="text"
+              placeholder="টেক্সট / Paste Text"
+            />
+              <button class="search-icon" id="searchBtn" aria-label="Search">
+              <img src="search.png" height="20" width="20" alt="Search">
+            </button>
+          </div>
+          <button id="verifyBtn" class="verify-btn">VERIFY<br>যাচাই</button>
+        </section>
+
+       
+        <section class="result-section">
+          <div class="result-label">RESULT</div>
+
+          <div class="result-grid">
+
+            
+            <div class="result-card gauge-card">
+              <div class="gauge-wrap">
+                <div class="gauge" id="gauge" style="--percent:85;">
+                  <div class="gauge-inner">
+                    <span id="scoreText">85%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="confidence-title">
+                FAKE CONTENT CONFIDENCE<br>
+                PERCENTAGE %
+              </div>
+
+              <div class="confidence-subtitle">
+                /নকল কন্টেন্ট হওয়ার সম্ভাবনা:
+              </div>
+
+              <div class="action-buttons">
+                <button class="pill-btn">SHARE শেয়ার</button>
+                <button id="newVerificationBtn" class="pill-btn secondary">New Verification</button>
+              </div>
+            </div>
+
+           
+            <div class="result-card explanation-card">
+              <h2>কেন হলো / Explanation ?</h2>
+              <ul id="explanationList">
+                <li>এই সংবাদটি অনেক বিশ্বস্ত সংবাদের সাথে সাদৃশ্যপূর্ণ হয়নি</li>
+                <li>ফেসবুকে মাত্র দুটি পেজ এই খবর শেয়ার করেছে</li>
+                <li>একই ধরনের খবর ২০২৩ সালে ভাইরাল হয়েছিল</li>
+                <li>সরকারি ওয়েবসাইটে এই বিষয়ে কোনো তথ্য নেই</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="textverufyjs.js"></script>
+</body>
+</html>

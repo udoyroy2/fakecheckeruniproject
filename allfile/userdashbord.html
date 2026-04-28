@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeChecker - User Dashboard</title>
+  <link rel="stylesheet" href="userdashbordcss.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="page">
+
+    
+    <header class="topbar">
+      <div class="brand-box">
+        <img src="logo.png" height="120" width="120" alt="FakeChecker Logo">
+
+      </div>
+
+      <h1 class="page-title">USER DASHBOAAD</h1>
+
+      <a href="index.html" class="back-link">BACK TO HOME</a>
+    </header>
+
+    
+    <div class="dashboard-layout">
+
+      
+      <aside class="left-panel card">
+        <nav class="dashboard-menu">
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="profilepicupdate.jpg" height="20" width="20" alt=""></span>
+            <span>UPDATE PROFILE</span>
+          </a>
+
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="verifyhistory.png" height="20" width="20" alt=""></span>
+            <span>VERIFICATION HISTORY</span>
+          </a>
+
+          <a href="#" class="dash-item">
+            <span class="dash-icon"><img src="setting.png" height="20" width="20" alt=""></span>
+            <span>SETTINGS</span>
+          </a>
+        </nav>
+      </aside>
+
+      
+      <section class="stats-panel card">
+        <h2 class="panel-title">আজকের ডাটা / Todays Data</h2>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <img src="totalcheck.png" height="50" width="50" class="stat-top-icon" alt="">
+
+            <div class="mini-bar-shell">
+              <div class="mini-bar blue-bar" id="totalCount">0</div>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <img src="fake.jpg" height="50" width="50" class="stat-top-icon" alt="">
+            <div class="stat-label red-label">Fake Found/ভুয়া পাওয়া গেছে</div>
+            <div class="mini-bar-shell">
+              <div class="mini-bar red-bar" id="fakeCount">0</div>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <img src="authentic.png" height="50" width="50" class="stat-top-icon" alt="">
+            <div class="stat-label green-label">Authentic/প্রামাণ্য</div>
+            <div class="mini-bar-shell">
+              <div class="mini-bar green-bar" id="realCount">0</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <aside class="profile-panel card">
+        <div class="profile-inner">
+          <img src="user.avif" class="profile-avatar" alt="User Profile">
+          <div class="profile-info">
+
+            <p><strong>Name:</strong> <span id="dashboardName">Loading...</span></p>
+            <p><strong>Gmail:</strong> <span id="dashboardEmail">Loading...</span></p>
+
+
+          </div>
+        </div>
+      </aside>
+
+      
+      <section class="history-panel card">
+        <h2 class="history-title">Verification History</h2>
+
+        <div class="table-wrap">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>CONTENT TYPE</th>
+                <th>DATE</th>
+                <th>RESULT</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+
+            
+            <tbody id="historyTableBody"></tbody>
+
+          </table>
+        </div>
+
+<button class="new-verification-btn" id="newVerificationBtn">
+  New Verification
+</button>
+      </section>
+
+     
+      <footer class="dashboard-footer">
+        <div class="language-box">
+          <span>SELECT LANGUAGE</span>
+          <span class="arrow">⌄</span>
+        </div>
+
+        <button class="logout-btn" id="logoutBtn">LogOut</button>
+      </footer>
+
+    </div>
+  </div>
+<script src="userdashbordjs.js"></script>
+ 
+</body>
+
+</html>
